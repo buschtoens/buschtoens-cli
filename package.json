@@ -24,8 +24,8 @@
   "type": "module",
   "bin": "bin.js",
   "files": [
-    "*.js",
-    "*.d.ts",
+    "**/*.js",
+    "**/*.d.ts",
     "assets/"
   ],
   "dependencies": {
