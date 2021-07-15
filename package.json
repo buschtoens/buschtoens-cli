@@ -1,0 +1,63 @@
+{
+  "name": "buschtoens",
+  "version": "0.0.0",
+  "description": "@buschtoens in your terminal!",
+  "license": "MIT",
+  "repository": "buschtoens/buschtoens-cli",
+  "author": {
+    "name": "Jan Buschtöns",
+    "email": "jan@buschtoens.me",
+    "url": "https://jan.buschtoens.me"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "start": "$npm_node_execpath --loader ts-node/esm ./cli.tsx",
+    "serve": "nodemon -x \"$npm_execpath start\"",
+    "lint": "eslint .",
+    "test": "$npm_execpath run build && $npm_execpath run lint"
+  },
+  "type": "module",
+  "bin": "bin.js",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "assets/"
+  ],
+  "dependencies": {
+    "ink": "^3.0.8",
+    "ink-divider": "^3.0.0",
+    "ink-gradient": "^2.0.0",
+    "ink-link": "^2.0.0",
+    "ink-select-input": "^4.2.0",
+    "ink-use-stdout-dimensions": "^1.0.5",
+    "open": "^8.2.1",
+    "react": "^17.0.2",
+    "string-width": "^5.0.0"
+  },
+  "devDependencies": {
+    "@clark/eslint-config-node": "^2.2.0",
+    "@clark/eslint-config-node-typescript": "^2.2.0",
+    "@clark/prettier-config": "^2.2.0",
+    "@sindresorhus/tsconfig": "^1.0.2",
+    "@types/ink-divider": "^2.0.2",
+    "@types/ink-gradient": "^2.0.1",
+    "@types/node": "^16.3.2",
+    "@types/react": "^17.0.14",
+    "eslint": "^7.30.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "ink-testing-library": "^2.1.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "prettier": "@clark/prettier-config/trailing-comma",
+  "eslintConfig": {
+    "extends": "./.eslintrc.cjs"
+  }
+}

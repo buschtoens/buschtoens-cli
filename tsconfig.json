@@ -1,0 +1,21 @@
+{
+  "extends": "@sindresorhus/tsconfig",
+
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "preferTsExts": true,
+
+    "compilerOptions": {
+      "allowJs": true
+    }
+  },
+
+  "compilerOptions": {
+    "jsx": "react",
+    "incremental": true,
+    "outDir": "."
+  },
+
+  "exclude": []
+}
