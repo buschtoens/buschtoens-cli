@@ -18,7 +18,8 @@
     "start": "$npm_node_execpath --loader ts-node/esm ./cli.tsx",
     "serve": "nodemon -x \"$npm_execpath start\"",
     "lint": "eslint .",
-    "test": "$npm_execpath run build && $npm_execpath run lint"
+    "test": "$npm_execpath run build && $npm_execpath run lint",
+    "prepublishOnly": "$npm_execpath run build"
   },
   "type": "module",
   "bin": "bin.js",
