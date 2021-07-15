@@ -1,0 +1,10 @@
+// .vscode/settings.json
+{
+  // Preferred path ending for auto imports.
+  //  - auto: Use project settings to select a default.
+  //  - minimal: Shorten `./component/index.js` to `./component`.
+  //  - index: Shorten `./component/index.js` to `./component/index`.
+  //  - js: Do not shorten path endings; include the `.js` extension.
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js"
+}
