@@ -9,6 +9,7 @@
     "email": "jan@buschtoens.me",
     "url": "https://jan.buschtoens.me"
   },
+  "engineStrict": true,
   "engines": {
     "node": "^12.20 || >=14.13"
   },
