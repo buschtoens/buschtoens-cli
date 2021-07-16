@@ -10,7 +10,7 @@
     "url": "https://jan.buschtoens.me"
   },
   "engines": {
-    "node": ">=12"
+    "node": "^12.20 || >=14.13"
   },
   "scripts": {
     "build": "tsc --build",
@@ -61,5 +61,8 @@
   "prettier": "@clark/prettier-config/trailing-comma",
   "eslintConfig": {
     "extends": "./.eslintrc.cjs"
+  },
+  "volta": {
+    "node": "14.17.3"
   }
 }
