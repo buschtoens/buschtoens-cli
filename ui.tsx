@@ -19,62 +19,73 @@ export const App: FC<{}> = () => {
       height={rows - 2}
       paddingX={2}
       paddingY={1}
-      justifyContent="space-between"
+      justifyContent="center"
     >
-      <Box marginRight={2} flexShrink={0} flexGrow={0}>
-        <Gradient name="rainbow">
-          <Text>{astronaut}</Text>
-        </Gradient>
-      </Box>
-
-      <Box
-        flexDirection="column"
-        alignItems="stretch"
-        flexGrow={0}
-        flexShrink={0}
-      >
-        <Box flexDirection="column">
-          <Box
-            paddingX={2}
-            paddingY={1}
-            borderStyle="round"
-            borderColor="magenta"
-          >
-            <Text>
-              {/*
-                `&#8203;` (zero-width space) fixes the incorrect Emoji sizing.
-                https://github.com/vadimdemedes/ink/pull/444
-              */}
-              👋 Hey there!&#8203;
-              <Newline count={2} />
-              {'   '}My name is{' '}
-              <Text bold>
-                <Gradient name="instagram">Jan Buschtöns</Gradient>
-              </Text>{' '}
-              <Link url="https://twitter.com/buschtoens" fallback={false}>
-                <Text bold dimColor>
-                  (@buschtoens)
-                </Text>
-              </Link>
-              .
-              <Newline count={2} />
-              📍 I live in: &#8203;
-              <Link
-                url="https://goo.gl/maps/kHawmTqhVR5HhMs26"
-                fallback={false}
-              >
-                Frankfurt am Main, Germany
-              </Link>
-            </Text>
-          </Box>
+      <Box flexShrink={1} flexGrow={0} flexBasis={100} minWidth={80}>
+        <Box
+          marginRight={2}
+          flexShrink={0}
+          flexGrow={0}
+          display={columns < 84 ? 'none' : 'flex'}
+        >
+          <Gradient name="rainbow">
+            <Text>{astronaut}</Text>
+          </Gradient>
         </Box>
 
         <Spacer />
 
-        <Box flexDirection="column">
-          <Divider title="Find me online" />
-          <Links />
+        <Box
+          flexDirection="column"
+          alignItems="stretch"
+          flexGrow={0}
+          flexShrink={0}
+        >
+          <Box flexDirection="column">
+            <Box
+              paddingX={2}
+              paddingY={1}
+              borderStyle="round"
+              borderColor="magenta"
+            >
+              <Text>
+                {/*
+                `&#8203;` (zero-width space) fixes the incorrect Emoji sizing.
+                https://github.com/vadimdemedes/ink/pull/444
+              */}
+                👋 Hey there!&#8203;
+                <Newline count={2} />
+                {'   '}My name is{' '}
+                <Text bold>
+                  <Gradient name="instagram">Jan Buschtöns</Gradient>
+                </Text>{' '}
+                <Link url="https://twitter.com/buschtoens" fallback={false}>
+                  <Text bold dimColor>
+                    (@buschtoens)
+                  </Text>
+                </Link>
+                .
+                <Newline count={2} />
+                📍 I live in: &#8203;
+                <Link
+                  url="https://goo.gl/maps/kHawmTqhVR5HhMs26"
+                  fallback={false}
+                >
+                  Frankfurt am Main, Germany
+                </Link>
+              </Text>
+            </Box>
+          </Box>
+
+          <Spacer />
+
+          <Box flexDirection="column">
+            <Divider title="Find me online" />
+            <Links />
+          </Box>
         </Box>
+
+        <Spacer />
       </Box>
     </Box>
   );
