@@ -6,6 +6,13 @@ desires.
 [website]: https://jan.buschtoens.me
 [github]: https://github.com/buschtoens
 
+<p align="center">
+  <img
+    alt="Demo: Animated GIF of running 'npx buschtoens' in a terminal."
+    src="./docs/demo.gif"
+  >
+</p>
+
 ## Usage
 
 [Install Node.js][volta], then:
