@@ -4,6 +4,7 @@
   "description": "@buschtoens in your terminal!",
   "license": "MIT",
   "repository": "buschtoens/buschtoens-cli",
+  "homepage": "https://jan.buschtoens.me",
   "author": {
     "name": "Jan Buschtöns",
     "email": "jan@buschtoens.me",
